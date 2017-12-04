@@ -16,8 +16,7 @@
     "prepublish": "npm run build",
     "format":
       "prettier --trailing-comma es5 --single-quote  --write 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
-    "doctoc": "doctoc .",
-    "precommit": "lint-staged"
+    "doctoc": "doctoc ."
   },
   "lint-staged": {
     "**/*.{ts,tsx}": ["prettier --write", "git add"],
