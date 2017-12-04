@@ -1,6 +1,6 @@
 # Squeezy
 
-An tiny 1KB accessible React Accordion render prop component.
+An tiny 1KB React component for accessible accordions / collapse UI
 
 ```
 npm i squeezy
