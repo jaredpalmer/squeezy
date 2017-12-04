@@ -39,31 +39,35 @@ const App = () => (
 export default App;
 ```
 
-## `<Squeezy>` Props
+## API
 
-### `id: string`
+### `<Squeezy>` Props
+
+#### `id: string`
 
 **Required**
 
 An HTML `id` attribute. Used by Squeezy to make the accordion accessible.
 
-### `debug?: boolean`
+#### `debug?: boolean`
 
 Log changes to Squeezy state to the console.
 
-### `isOpen?: boolean`
+#### `isOpen?: boolean`
 
 If you want to make Squeezy a controlled component (i.e. manage its state
 externally), pass Squeezy an `isOpen` prop.
 
-### `onToggle?: (state: SqueezyState, helpers: SqueezyActions) => void`
+#### `onToggle?: (state: SqueezyState, helpers: SqueezyActions) => void`
 
 Callback to run on state changes. If Squeezy is controlled, use this to set the
 next state externally. Otherwise, good place for side effects.
 
-### `render: (props: SqueezyProps) => React.ReactNode`
+#### `render: (props: SqueezyProps) => React.ReactNode`
 
-Render prop. The following state and helper methods are made available:
+Render prop.
+
+### Squeezy State and Helpers
 
 #### `getButtonProps(moreProps: any) => void`
 
