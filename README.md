@@ -6,6 +6,30 @@ An tiny 1KB React component for accessible accordions / collapse UI
 npm i squeezy
 ```
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Usage](#usage)
+- [API](#api)
+  - [`<Squeezy>` Props](#squeezy-props)
+    - [`id: string`](#id-string)
+    - [`debug?: boolean`](#debug-boolean)
+    - [`isOpen?: boolean`](#isopen-boolean)
+    - [`onToggle?: (state: SqueezyState, helpers: SqueezyActions) => void`](#ontoggle-state-squeezystate-helpers-squeezyactions--void)
+    - [`render: (props: SqueezyProps) => React.ReactNode`](#render-props-squeezyprops--reactreactnode)
+  - [Squeezy State and Helpers](#squeezy-state-and-helpers)
+    - [`getButtonProps(moreProps: any) => void`](#getbuttonpropsmoreprops-any--void)
+    - [`getContentProps(moreProps: any) => void`](#getcontentpropsmoreprops-any--void)
+    - [`isOpen: boolean`](#isopen-boolean)
+    - [`close: () => void`](#close---void)
+    - [`open: () => void`](#open---void)
+    - [`toggle: () => void`](#toggle---void)
+- [Inspiration](#inspiration)
+- [Author](#author)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Usage
 
 ```js
@@ -94,7 +118,7 @@ Open the accordion.
 
 Toggle the accordion.
 
-### Inspiration
+## Inspiration
 
 * [react-toggled](https://github.com/kentcdodds/react-toggled)
 
