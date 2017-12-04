@@ -8,23 +8,20 @@
   "scripts": {
     "test": "jest --env=jsdom",
     "test:watch": "npm run test -- --watch",
-    "start": "cross-env NODE_ENV=development tsc-watch --onSuccess \"rollup -c\"",
+    "start":
+      "cross-env NODE_ENV=development tsc-watch --onSuccess \"rollup -c\"",
     "prebuild": "rimraf dist",
-    "build": "tsc && cross-env NODE_ENV=production rollup -c && cross-env NODE_ENV=development rollup -c && rimraf compiled",
+    "build":
+      "tsc && cross-env NODE_ENV=production rollup -c && cross-env NODE_ENV=development rollup -c && rimraf compiled",
     "prepublish": "npm run build",
-    "format": "prettier --trailing-comma es5 --single-quote  --write 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
+    "format":
+      "prettier --trailing-comma es5 --single-quote  --write 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
     "doctoc": "doctoc .",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "**/*.{ts,tsx}": [
-      "prettier --write",
-      "git add"
-    ],
-    "README.md": [
-      "doctoc .",
-      "git add"
-    ]
+    "**/*.{ts,tsx}": ["prettier --write", "git add"],
+    "README.md": ["doctoc .", "git add"]
   },
   "prettier": {
     "trailingComma": "es5",
@@ -32,20 +29,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jaredpalmer/react-fns.git"
+    "url": "git+https://github.com/jaredpalmer/squeezy.git"
   },
-  "keywords": [
-    "react",
-    "react-fns",
-    "render-props",
-    "hoc"
-  ],
+  "keywords": ["react", "squeezy", "render-props", "hoc"],
   "author": "Jared Palmer <jared@palmer.net>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jaredpalmer/react-fns/issues"
+    "url": "https://github.com/jaredpalmer/squeezy/issues"
   },
-  "homepage": "https://github.com/jaredpalmer/react-fns#readme",
+  "homepage": "https://github.com/jaredpalmer/squeezy#readme",
   "devDependencies": {
     "@types/jest": "20.0.6",
     "@types/node": "^8.0.22",
@@ -77,24 +69,13 @@
     "typescript": "2.6.1"
   },
   "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{ts,tsx}"
-    ],
+    "collectCoverageFrom": ["src/**/*.{ts,tsx}"],
     "transform": {
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "testMatch": [
-      "<rootDir>/src/**/?(*.)(spec|test).ts?(x)"
-    ],
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json"
-    ]
+    "testMatch": ["<rootDir>/src/**/?(*.)(spec|test).ts?(x)"],
+    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
+    "moduleFileExtensions": ["ts", "tsx", "js", "json"]
   },
   "dependencies": {},
   "peerDependencies": {
